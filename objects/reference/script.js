@@ -1,25 +1,30 @@
-/**
- * The ECMAScript 2017 standard introduced two new object methods: Object.entries(), and Object.values().
- * The Object.values() method returns all the values of an object's properties and methods.
- * The Object.entries() method returns all the key-value pairs.
- * Be careful with these methods as they are not currently supported in Internet Explorer, not even in the latest version.
- */
+function copy(obj) {
+  // write your code here
+  const newObj = {};
+  //add all the properties of the initial object to it
+  Object.keys(obj).forEach(function (key) {
+    newObj[key] = obj[key];
+  });
+  return newObj;
+}
 
-const heights = {
-  burjKhalifa: 828,
-  tokyoSkyTree: 634,
-  shanghaiTower: 632,
-  abrajAlBait: 601,
-  cantonTower: 600,
-  pingAnFinanceCentre: 600,
-  lotteWorldTower: 555,
-  cnTower: 553,
-  oneWorldTradeCenter: 541,
-  ostankinoTower: 540,
+const firstObj = {
+  one: 1,
+  two: 2,
+  three: 3,
 };
 
-const stratosphere = 11000;
+const secondObj = firstObj;
+const thirdObj = copy(firstObj);
 
-const sumHeights = Object.values(heights).reduce((acc, value) => acc + value);
+console.log(firstObj); // { one: 1, three: 3, two: 2 }
+console.log(secondObj); // { one: 1, three: 3, two: 2 }
+console.log(thirdObj); // { one: 1, three: 3, two: 2 }
 
-console.log(sumHeights >= stratosphere);
+firstObj.four = 4;
+
+console.log(firstObj); // { four: 4, one: 1, three: 3, two: 2 }
+console.log(secondObj); // { four: 4, one: 1, three: 3, two: 2 }
+
+// thirdObj has not changed
+console.log(thirdObj); // { one: 1, three: 3, two: 2 }
