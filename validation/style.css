@@ -1,0 +1,24 @@
+.form__input:hover {
+    border-bottom-color: #000;
+  }
+  
+  .form__input:focus {
+    border-bottom-color: #007DFF;
+  }
+  
+  .form__input:valid {
+    border-bottom: 1px solid green;
+  }
+  
+  .form__input:invalid {
+    border-bottom: 1px solid red;
+  }
+  
+  .form__checkbox:checked + .form__checkbox-item {
+    background: #007DFF;
+  }
+  
+  .form__checkbox:checked + .form__checkbox-item::before {
+    background: url("https://code.s3.yandex.net/web-code/checkbox.svg") center no-repeat;
+  }
+  
