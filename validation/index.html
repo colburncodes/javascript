@@ -5,31 +5,94 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Subscription Form</title>
+  <title>Feedback Form</title>
   <link rel="stylesheet" href="https://code.s3.yandex.net/web-code/normalize.css">
-  <link rel="stylesheet" href="https://code.s3.yandex.net/web-code/form-validation/lesson-4/index.css">
+  <link rel="stylesheet" href="https://code.s3.yandex.net/web-code/form-validation/lesson-5/index.css">
 </head>
+
 <body class="page">
 <div class="page__content">
   <main class="page__section content">
     <h1 class="content__title">
-      Subscribe now
+      Feedback Form
     </h1>
+    <p class="content__subtitle">
+      Fill in the required fields
+    </p>
     <form class="form" novalidate>
-      <label class="form__field">
-        <input type="email" class="form__input" id="email-input" required minlength="7">
-        <span class="form__placeholder email-input-placeholder">
+      <fieldset class="form__set">
+        <label class="form__field">
+          <input type="email" class="form__input" id="email-input" required minlength="7">
+          <span class="form__placeholder email-input-placeholder">
             Email:
           </span>
-        <span class="form__input-error email-input-error" ></span>
-      </label>
-      <button type="submit" class="button">
-        Submit
-      </button>
+          <span class="form__input-error email-input-error"></span>
+        </label>
+        <label class="form__field">
+          <input type="password" class="form__input" id="password-input" required minlength="7">
+          <span class="form__placeholder password-input-placeholder">
+            Password:
+          </span>
+          <span class="form__input-error password-input-error"></span>
+        </label>
+        <label class="form__field form__field_type_row">
+          <input class="form__checkbox form__input" id="checkbox-input" type="checkbox" checked required>
+          <span class="form__checkbox-item"></span>
+          <span class="form__text">Consent to the processing of personal data</span>
+          <span class="form__input-error checkbox-input-error"></span>
+          <span class="form__placeholder checkbox-input-placeholder"></span>
+        </label>
+        <button type="button" class="form__submit form__button button">
+          Next
+        </button>
+      </fieldset>
+      <fieldset class="form__set">
+        <button class="text-button form__previous">&larr; Back</button>
+        <label class="form__field">
+          <input type="text" class="form__input" id="name-input" required minlength="2">
+          <span class="form__placeholder name-input-placeholder">
+            What is your name??
+          </span>
+          <span class="form__input-error name-input-error"></span>
+        </label>
+        <label class="form__field">
+          <input type="text" class="form__input" id="happiness-input" required minlength="4">
+          <span class="form__placeholder happiness-input-placeholder">
+            How are you feeling??
+          </span>
+          <span class="form__input-error happiness-input-error"></span>
+        </label>
+        <label class="form__field">
+          <input type="text" class="form__input" id="javascript-rating-input" required minlength="5">
+          <span class="form__placeholder javascript-rating-input-placeholder">
+            Is JavaScript that hard??
+          </span>
+          <span class="form__input-error javascript-rating-input-error"></span>
+        </label>
+        <label class="form__field">
+          <input type="text" class="form__input" id="suggestion-input" required minlength="5">
+          <span class="form__placeholder suggestion-input-placeholder">
+            How many interesting questions can one make up??
+          </span>
+          <span class="form__input-error suggestion-input-error"></span>
+        </label>
+        <button type="button" class="form__submit form__button button">
+          Next
+        </button>
+      </fieldset>
+      <fieldset class="form__set">
+        <button class="text-button form__previous">&larr; Back</button>
+        <p class="form__paragraph">
+          Successfully submitted!
+        </p>
+        <button type="submit" class="form__submit button">
+          That's all, folks!
+        </button>
+      </fieldset>
     </form>
   </main>
 </div>
-<script src="https://code.s3.yandex.net/web-code/form-validation/lesson-4/index.js"></script>
+<script src="https://code.s3.yandex.net/web-code/form-validation/lesson-5/index.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
