@@ -23,18 +23,18 @@ const items = [
 ];
 
 class Card {
-  constructor(title, description, price, image) {
-    this._title = title;
-    this._description = description;
-    this._price = price;
-    this._image = image;
+  constructor(data, cardSelector) {
+    this._title = data.title;
+    this._description = data.description;
+    this._price = data.price;
+    this._image = data.image;
+    this._cardSelector = cardSelector;
   }
 
   _getCardTemplate() {
     const template = document
-      .querySelector(".horizontal-card")
-      .content.querySelector(".card")
-      .cloneNode(true);
+      .querySelector(this._cardSelector)
+      .content.cloneNode(true);
 
     return template;
   }
@@ -54,8 +54,7 @@ class Card {
 }
 
 items.forEach((item) => {
-  const card = new Card(item.title, item.description, item.price, item.image);
+  const card = new Card(item, ".horizontal-card");
   const cardElement = card.generateCard();
-
   document.querySelector(".card-list__items").append(cardElement);
 });
