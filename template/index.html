@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Card Preview</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body class="page">
+<main class="content page__content">
+  <div class="filter content__filter">
+    The display type:
+    <button type="button" class="button filter__button filter__button_type_grid" data-elements-type="grid"></button>
+    <button type="button" class="button filter__button filter__button_type_column" data-elements-type="column"></button>
+  </div>
+  <section class="card-list">
+    <header class="heading">
+      <h2 class="heading__title">
+        Result
+      </h2>
+    </header>
+    <div class="card-list__items">
+      <!-- Container for adding cards -->
+    </div>
+  </section>
+</main>
+<div class="popup">
+  <div class="popup__content">
+    <button type="button" class="popup__close"></button>
+    <img src="https://code.s3.yandex.net/web-code/oop/card_detail.jpg" alt="" class="popup__image">
+    <p class="popup__caption"></p>
+  </div>
+</div>
+
+<!-- Horizontal card template -->
+<template class="horizontal-card">
+  <article class="card card_content_horizontal">
+    <div class="card__image" style="background-image: url('https://code.s3.yandex.net/web-code/oop/card_detail.jpg');"></div>
+    <div class="card__description">
+      <h3 class="card__title">
+        Robot Kit
+      </h3>
+      <p class="card__info">
+        Robot Kit is a popular series of robot construction kits from the company Robotis. The series includes various sets designed both for beginners and for advanced users. In this kit, you'll find everything you need to build unique types of robots and make custom designs. The set comes with a software tool for programming, a remote controller, servo motors, and much more.
+      </p>
+      <p class="card__property"></p>
+      <span class="card__span-accent">
+        Price:
+        <span class="card__price-property">
+          $1800
+        </span>
+      </span>
+      <button class="button classic-button card__button">
+        Add to cart
+      </button>
+    </div>
+  </article>
+</template>
+
+<script src="script.js"></script>
+</body>
+</html>
