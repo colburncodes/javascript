@@ -1,9 +1,7 @@
-import DefaultCard from "./DefaultCard.js";
-import HorizontalCard from "./HorizontalCard.js";
-
 class Section {
-  constructor({ data }, containerSelector) {
+  constructor({ data, renderer }, containerSelector) {
     this._renderedItems = data;
+    this._renderer = renderer;
     this._container = document.querySelector(containerSelector);
   }
 
@@ -12,17 +10,11 @@ class Section {
   clear = () => {
     this._container.innerHTML = "";
   };
-
-  renderItems(isGrid) {
+  renderItems() {
     this.clear();
 
-    this._renderedItems.map((item) => {
-      const card = isGrid
-        ? new DefaultCard(item, ".default-card")
-        : new HorizontalCard(item, ".horizontal-card");
-
-      const cardElement = card.generateCard();
-      this.setItem(cardElement);
+    this._renderedItems.forEach((item) => {
+      this._renderer(item);
     });
   }
 }
