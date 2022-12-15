@@ -1,0 +1,64 @@
+html, body {
+    font-family: Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  input, button {
+    border: none;
+  }
+  
+  .header {
+    max-width: 468px;
+    height: 80px;
+    margin: auto;
+    display: flex;
+    padding-top: 30px;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  
+  .header__logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header__logo {
+    width: 150px;
+    -webkit-filter: invert(1);
+    filter: invert(1);
+  }
+  
+  .header__logo-sub {
+    margin-left: 10px;
+    margin-bottom: 25px;
+    font-size: 0.6em;
+  }
+  
+  .container {
+    max-width: 468px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .quote {
+    margin: 40px 0;
+    width: 100%;
+    font-size: 5.5em;
+    font-weight: bold;
+  }
+  
+  .header__btn {
+    font-size: 0.8em;
+    width: 150px;
+    height: 50px;
+    background-color: #ffdb4d;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  
